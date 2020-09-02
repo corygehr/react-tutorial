@@ -78,10 +78,16 @@ function Square(props) {
         // OR if there is a winner.
         return;
       }
+
+      // Take spot on board
       squares[i] = this.state.xIsNext ? 'X' : 'O';
+
+      // Generate move summary
+      const summary = squares[i] + " to " + i;
       this.setState({
         history: history.concat([{
           squares: squares,
+          summary: summary
         }]),
         stepNumber: history.length,
         xIsNext: !this.state.xIsNext,
@@ -102,7 +108,7 @@ function Square(props) {
 
       const moves = history.map((step, move) => {
         const desc = move ? 
-        'Go to move #' + move :
+        'Go to move #' + move + " (" + step.summary + ")":
         'Go to game start';
 
         return (
