@@ -1,3 +1,7 @@
+Just messing around with the React tutorial (see link below). Includes optional steps.
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
